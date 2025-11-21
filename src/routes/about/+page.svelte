@@ -1,11 +1,49 @@
 <svelte:head>
 	<title>About - Jordan Garbett | Pole Fit</title>
-	<meta name="description" content="Learn about Jordan Garbett and her passion for pole dancing" />
+	<meta name="description" content="Learn about Jordan Garbett and her passion for pole dancing. Professional pole dancing instructor offering lessons, performances, and event entertainment." />
+	<meta name="keywords" content="Jordan Garbett, pole dancing instructor, pole fitness, pole dancing lessons, pole dancing about" />
+	<meta name="author" content="Jordan Garbett" />
+	<meta name="robots" content="index, follow" />
+	<link rel="canonical" href="https://polefit.com/about" />
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://polefit.com/about" />
+	<meta property="og:title" content="About Jordan Garbett | Pole Fit" />
+	<meta property="og:description" content="Learn about Jordan Garbett and her passion for pole dancing. Professional instruction, event entertainment, and custom performances." />
+	<meta property="og:image" content="https://polefit.com/images/og-image.jpg" />
+	<meta property="og:site_name" content="Pole Fit" />
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:url" content="https://polefit.com/about" />
+	<meta name="twitter:title" content="About Jordan Garbett | Pole Fit" />
+	<meta name="twitter:description" content="Learn about Jordan Garbett and her passion for pole dancing." />
+	<meta name="twitter:image" content="https://polefit.com/images/og-image.jpg" />
+	
+	<!-- Schema.org Structured Data -->
+	{@html `<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Jordan Garbett",
+		"url": "https://polefit.com/about",
+		"image": "https://polefit.com/images/og-image.jpg",
+		"jobTitle": "Pole Dancing Instructor and Performer",
+		"worksFor": {
+			"@type": "Organization",
+			"name": "Pole Fit"
+		},
+		"sameAs": [
+			"https://www.instagram.com/jordygpolefit/"
+		]
+	}
+	</script>`}
 </svelte:head>
 
-<div class="min-h-screen bg-black text-white overflow-x-hidden">
+<main class="min-h-screen bg-black text-white overflow-x-hidden">
 	<!-- Hero Section -->
-	<section class="relative py-32 px-4 flex items-center justify-center overflow-hidden">
+	<header class="relative py-32 px-4 flex items-center justify-center overflow-hidden" role="banner">
 		<!-- Animated background elements -->
 		<div class="absolute inset-0 opacity-20">
 			<div class="absolute top-20 left-10 w-96 h-96 bg-white rounded-full blur-3xl animate-float"></div>
@@ -23,7 +61,7 @@
 				Jordan Garbett
 			</p>
 		</div>
-	</section>
+	</header>
 
 	<!-- Section Divider -->
 	<div class="section-divider"></div>
@@ -136,13 +174,13 @@
 	</section>
 
 	<!-- Footer -->
-	<footer class="py-16 px-4 border-t border-gray-800 relative">
-		<div class="absolute inset-0 grid-pattern opacity-5"></div>
+	<footer class="py-16 px-4 border-t border-gray-800 relative" role="contentinfo">
+		<div class="absolute inset-0 grid-pattern opacity-5" aria-hidden="true"></div>
 		<div class="max-w-6xl mx-auto text-center text-gray-500 relative z-10">
 			<p class="text-sm uppercase tracking-wider">&copy; 2025 Pole Fit. All rights reserved.</p>
 		</div>
 	</footer>
-</div>
+</main>
 
 <style>
 	@keyframes float {

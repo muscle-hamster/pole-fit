@@ -42,13 +42,147 @@
 </script>
 
 <svelte:head>
-	<title>Pole Fit - Professional Pole Dancing Services</title>
-	<meta name="description" content="Professional pole dancing instruction and event entertainment" />
+	<title>Pole Fit - Professional Pole Dancing Services | Jordan Garbett</title>
+	<meta name="description" content="Professional pole dancing instruction and event entertainment by Jordan Garbett. Custom performances, private lessons, and event entertainment services." />
+	<meta name="keywords" content="pole dancing, pole fitness, pole dancing instruction, pole dancing lessons, pole dancing events, pole dancing performance, Jordan Garbett, pole dancing instructor" />
+	<meta name="author" content="Jordan Garbett" />
+	<meta name="robots" content="index, follow" />
+	<link rel="canonical" href="https://polefit.com/" />
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://polefit.com/" />
+	<meta property="og:title" content="Pole Fit - Professional Pole Dancing Services | Jordan Garbett" />
+	<meta property="og:description" content="Professional pole dancing instruction and event entertainment by Jordan Garbett. Custom performances, lessons, and events." />
+	<meta property="og:image" content="https://polefit.com/images/og-image.jpg" />
+	<meta property="og:site_name" content="Pole Fit" />
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:url" content="https://polefit.com/" />
+	<meta name="twitter:title" content="Pole Fit - Professional Pole Dancing Services | Jordan Garbett" />
+	<meta name="twitter:description" content="Professional pole dancing instruction and event entertainment by Jordan Garbett." />
+	<meta name="twitter:image" content="https://polefit.com/images/og-image.jpg" />
+	
+	<!-- Schema.org Structured Data -->
+	{@html `<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "LocalBusiness",
+		"name": "Pole Fit",
+		"image": "https://polefit.com/images/og-image.jpg",
+		"@id": "https://polefit.com",
+		"url": "https://polefit.com",
+		"telephone": "",
+		"priceRange": "$$",
+		"address": {
+			"@type": "PostalAddress",
+			"addressCountry": "US"
+		},
+		"geo": {
+			"@type": "GeoCoordinates",
+			"latitude": "",
+			"longitude": ""
+		},
+		"openingHoursSpecification": {
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": [
+				"Monday",
+				"Tuesday",
+				"Wednesday",
+				"Thursday",
+				"Friday",
+				"Saturday",
+				"Sunday"
+			],
+			"opens": "00:00",
+			"closes": "23:59"
+		},
+		"sameAs": [
+			"https://www.instagram.com/jordygpolefit/"
+		],
+		"founder": {
+			"@type": "Person",
+			"name": "Jordan Garbett"
+		}
+	}
+	</script>`}
+	
+	{@html `<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"serviceType": "Pole Dancing Instruction and Entertainment",
+		"provider": {
+			"@type": "Person",
+			"name": "Jordan Garbett",
+			"url": "https://polefit.com/about"
+		},
+		"areaServed": {
+			"@type": "Country",
+			"name": "United States"
+		},
+		"hasOfferCatalog": {
+			"@type": "OfferCatalog",
+			"name": "Pole Dancing Services",
+			"itemListElement": [
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Showgirl Package",
+						"description": "Standard pole only with aerial insurance, equipment setup, costuming, two custom dances, and ambient set."
+					},
+					"price": "350",
+					"priceCurrency": "USD",
+					"priceSpecification": {
+						"@type": "UnitPriceSpecification",
+						"price": "350",
+						"priceCurrency": "USD",
+						"unitText": "hour"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Gentlemen's Package",
+						"description": "Standard pole only with aerial insurance, equipment setup, costuming, two custom dances, and ambient set."
+					},
+					"price": "350",
+					"priceCurrency": "USD",
+					"priceSpecification": {
+						"@type": "UnitPriceSpecification",
+						"price": "350",
+						"priceCurrency": "USD",
+						"unitText": "hour"
+					}
+				},
+				{
+					"@type": "Offer",
+					"itemOffered": {
+						"@type": "Service",
+						"name": "Atmosphere Package",
+						"description": "Perfect for galas, corporate events, cocktail hours, weddings or parties. Option to choose between lollipop pole or standard pole."
+					},
+					"price": "250",
+					"priceCurrency": "USD",
+					"priceSpecification": {
+						"@type": "UnitPriceSpecification",
+						"price": "250",
+						"priceCurrency": "USD",
+						"unitText": "hour"
+					}
+				}
+			]
+		}
+	}
+	</script>`}
 </svelte:head>
 
-<div class="min-h-screen bg-black text-white overflow-x-hidden">
+<main class="min-h-screen bg-black text-white overflow-x-hidden">
 	<!-- Hero Section -->
-	<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+	<header class="relative min-h-screen flex items-center justify-center overflow-hidden" role="banner">
 		<!-- Video Background -->
 		<div class="video-container absolute inset-0">
 			<!-- Fallback gradient background (shows if video doesn't load) -->
@@ -60,6 +194,7 @@
 				playsinline
 				class="hero-video"
 				preload="auto"
+				aria-label="Pole dancing performance video"
 			>
 				<!-- Add your video file here - replace with actual video path -->
 				<!-- Place your video file in the /static/videos/ folder -->
@@ -90,12 +225,13 @@
 		<div class="absolute inset-0 grid-pattern opacity-10 z-10"></div>
 
 		<div class="relative z-30 text-center px-4 max-w-5xl mx-auto">
-			<div class="mb-8">
+			<h1 class="sr-only">Pole Fit - Professional Pole Dancing Services by Jordan Garbett</h1>
+			<div class="mb-8" aria-hidden="true">
 				<span class="inline-block text-6xl md:text-8xl font-black tracking-wider chrome-text animate-glow">
 					POLE
 				</span>
 			</div>
-			<div class="mb-8">
+			<div class="mb-8" aria-hidden="true">
 				<span class="inline-block text-6xl md:text-8xl font-black tracking-wider chrome-text-reverse animate-glow-delayed">
 					FIT
 				</span>
@@ -121,36 +257,36 @@
 		</div>
 
 		<!-- Scroll indicator with animation -->
-		<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+		<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow" aria-hidden="true">
 			<div class="flex flex-col items-center gap-2">
 				<span class="text-xs text-gray-400 uppercase tracking-wider">Scroll</span>
-				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
 				</svg>
 			</div>
 		</div>
-	</section>
+	</header>
 
 	<!-- Section Divider -->
 	<div class="section-divider"></div>
 
 	<!-- Packages Section -->
-	<section id="packages" class="py-24 px-4 relative bg-gradient-to-b from-black via-gray-950 to-black">
+	<section id="packages" class="py-24 px-4 relative bg-gradient-to-b from-black via-gray-950 to-black" aria-labelledby="packages-heading">
 		<!-- Animated background stars -->
-		<div class="absolute inset-0 stars-bg"></div>
+		<div class="absolute inset-0 stars-bg" aria-hidden="true"></div>
 
 		<div class="max-w-7xl mx-auto relative z-10">
 			<div class="text-center mb-20">
-				<h2 class="text-7xl md:text-8xl font-black mb-4 tracking-tight">
+				<h2 id="packages-heading" class="text-7xl md:text-8xl font-black mb-4 tracking-tight">
 					<span class="chrome-text-section animate-glow">PACKAGES</span>
 				</h2>
-				<div class="w-32 h-1 bg-gradient-to-r from-transparent via-white to-transparent mx-auto"></div>
+				<div class="w-32 h-1 bg-gradient-to-r from-transparent via-white to-transparent mx-auto" aria-hidden="true"></div>
 			</div>
 
 			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 				<!-- Showgirl Package -->
-				<div class="package-card-premium group">
-					<div class="package-badge">POPULAR</div>
+				<article class="package-card-premium group">
+					<div class="package-badge" aria-label="Popular package">POPULAR</div>
 					<div class="package-header-premium">
 						<h3 class="text-4xl font-black mb-3 tracking-tight">Showgirl</h3>
 						<div class="text-5xl font-black text-white mb-2">
@@ -187,11 +323,11 @@
 						</ul>
 					</div>
 					<div class="package-glow"></div>
-				</div>
+				</article>
 
 				<!-- Gentlemen's Package -->
-				<div class="package-card-premium group">
-					<div class="package-badge">PREMIUM</div>
+				<article class="package-card-premium group">
+					<div class="package-badge" aria-label="Premium package">PREMIUM</div>
 					<div class="package-header-premium">
 						<h3 class="text-4xl font-black mb-3 tracking-tight">Gentlemen's</h3>
 						<div class="text-5xl font-black text-white mb-2">
@@ -228,11 +364,11 @@
 						</ul>
 					</div>
 					<div class="package-glow"></div>
-				</div>
+				</article>
 
 				<!-- Atmosphere Package -->
-				<div class="package-card-premium group">
-					<div class="package-badge">EVENTS</div>
+				<article class="package-card-premium group">
+					<div class="package-badge" aria-label="Events package">EVENTS</div>
 					<div class="package-header-premium">
 						<h3 class="text-4xl font-black mb-3 tracking-tight">Atmosphere</h3>
 						<div class="text-5xl font-black text-white mb-2">
@@ -266,12 +402,12 @@
 						</ul>
 					</div>
 					<div class="package-glow"></div>
-				</div>
+				</article>
 			</div>
 
 			<!-- Collab Requests -->
 			<div class="mt-16 text-center">
-				<div class="package-card-special inline-block max-w-lg">
+				<article class="package-card-special inline-block max-w-lg">
 					<div class="package-header-premium">
 						<h3 class="text-4xl font-black mb-3 tracking-tight">Collab Requests</h3>
 						<div class="text-3xl font-black text-white mb-4 tracking-wider">COST VARIES</div>
@@ -280,7 +416,7 @@
 						<p class="text-gray-200 text-lg">Interested in collaborating? Let's discuss your vision and create something amazing together.</p>
 					</div>
 					<div class="package-glow"></div>
-				</div>
+				</article>
 			</div>
 		</div>
 	</section>
@@ -289,16 +425,16 @@
 	<div class="section-divider"></div>
 
 	<!-- Portfolio Section -->
-	<section id="portfolio" class="py-24 px-4 bg-black relative overflow-hidden">
+	<section id="portfolio" class="py-24 px-4 bg-black relative overflow-hidden" aria-labelledby="portfolio-heading">
 		<!-- Animated grid background -->
-		<div class="absolute inset-0 grid-pattern opacity-5"></div>
+		<div class="absolute inset-0 grid-pattern opacity-5" aria-hidden="true"></div>
 
 		<div class="max-w-7xl mx-auto relative z-10">
 			<div class="text-center mb-20">
-				<h2 class="text-7xl md:text-8xl font-black mb-4 tracking-tight">
+				<h2 id="portfolio-heading" class="text-7xl md:text-8xl font-black mb-4 tracking-tight">
 					<span class="chrome-text-section animate-glow">PORTFOLIO</span>
 				</h2>
-				<div class="w-32 h-1 bg-gradient-to-r from-transparent via-white to-transparent mx-auto"></div>
+				<div class="w-32 h-1 bg-gradient-to-r from-transparent via-white to-transparent mx-auto" aria-hidden="true"></div>
 			</div>
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 				<!-- Placeholder portfolio items -->
@@ -322,8 +458,9 @@
 					<a 
 						href={instagramUrl} 
 						target="_blank" 
-						rel="noopener noreferrer"
+						rel="noopener noreferrer nofollow"
 						class="instagram-btn group"
+						aria-label="Visit Jordan Garbett's Instagram profile"
 					>
 						<div class="flex items-center gap-4">
 							<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -345,16 +482,16 @@
 	<div class="section-divider"></div>
 
 	<!-- Contact Section -->
-	<section id="contact" class="py-24 px-4 bg-gradient-to-b from-black via-gray-950 to-black relative">
+	<section id="contact" class="py-24 px-4 bg-gradient-to-b from-black via-gray-950 to-black relative" aria-labelledby="contact-heading">
 		<!-- Animated background -->
-		<div class="absolute inset-0 stars-bg opacity-50"></div>
+		<div class="absolute inset-0 stars-bg opacity-50" aria-hidden="true"></div>
 
 		<div class="max-w-3xl mx-auto relative z-10">
 			<div class="text-center mb-20">
-				<h2 class="text-7xl md:text-8xl font-black mb-4 tracking-tight">
+				<h2 id="contact-heading" class="text-7xl md:text-8xl font-black mb-4 tracking-tight">
 					<span class="chrome-text-section animate-glow">GET IN TOUCH</span>
 				</h2>
-				<div class="w-32 h-1 bg-gradient-to-r from-transparent via-white to-transparent mx-auto"></div>
+				<div class="w-32 h-1 bg-gradient-to-r from-transparent via-white to-transparent mx-auto" aria-hidden="true"></div>
 			</div>
 
 			{#if submitted}
@@ -364,7 +501,7 @@
 					<p class="text-gray-400 mt-2">We'll get back to you soon.</p>
 				</div>
 			{:else}
-				<form on:submit|preventDefault={handleSubmit} class="glossy-card-premium p-10 space-y-6">
+				<form on:submit|preventDefault={handleSubmit} class="glossy-card-premium p-10 space-y-6" method="POST" aria-label="Contact form">
 					<div>
 						<label for="name" class="block text-sm font-bold mb-3 text-gray-300 uppercase tracking-wider">Name</label>
 						<input
@@ -448,13 +585,13 @@
 	</section>
 
 	<!-- Footer -->
-	<footer class="py-16 px-4 border-t border-gray-800 relative">
-		<div class="absolute inset-0 grid-pattern opacity-5"></div>
+	<footer class="py-16 px-4 border-t border-gray-800 relative" role="contentinfo">
+		<div class="absolute inset-0 grid-pattern opacity-5" aria-hidden="true"></div>
 		<div class="max-w-6xl mx-auto text-center text-gray-500 relative z-10">
 			<p class="text-sm uppercase tracking-wider">&copy; 2025 Pole Fit. All rights reserved.</p>
 		</div>
 	</footer>
-</div>
+</main>
 
 <style>
 	/* Animations */
@@ -1116,6 +1253,19 @@
 		pointer-events: none;
 		z-index: 3;
 		opacity: 0.5;
+	}
+
+	/* Screen reader only - for accessibility */
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border-width: 0;
 	}
 
 	/* Smooth scroll */
