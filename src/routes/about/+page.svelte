@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>About - Jordan Garbett | Pole Fit</title>
+	<title>About - Jordan Garbett | Jordega</title>
 	<meta name="description" content="Learn about Jordan Garbett and her passion for pole dancing. Professional pole dancing instructor offering lessons, performances, and event entertainment." />
 	<meta name="keywords" content="Jordan Garbett, pole dancing instructor, pole fitness, pole dancing lessons, pole dancing about" />
 	<meta name="author" content="Jordan Garbett" />
@@ -9,15 +9,15 @@
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://polefit.com/about" />
-	<meta property="og:title" content="About Jordan Garbett | Pole Fit" />
+	<meta property="og:title" content="About Jordan Garbett | Jordega" />
 	<meta property="og:description" content="Learn about Jordan Garbett and her passion for pole dancing. Professional instruction, event entertainment, and custom performances." />
 	<meta property="og:image" content="https://polefit.com/images/og-image.jpg" />
-	<meta property="og:site_name" content="Pole Fit" />
+	<meta property="og:site_name" content="Jordega" />
 	
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:url" content="https://polefit.com/about" />
-	<meta name="twitter:title" content="About Jordan Garbett | Pole Fit" />
+	<meta name="twitter:title" content="About Jordan Garbett | Jordega" />
 	<meta name="twitter:description" content="Learn about Jordan Garbett and her passion for pole dancing." />
 	<meta name="twitter:image" content="https://polefit.com/images/og-image.jpg" />
 	
@@ -32,7 +32,7 @@
 		"jobTitle": "Pole Dancing Instructor and Performer",
 		"worksFor": {
 			"@type": "Organization",
-			"name": "Pole Fit"
+			"name": "Jordega"
 		},
 		"sameAs": [
 			"https://www.instagram.com/jordygpolefit/"
@@ -177,7 +177,7 @@
 	<footer class="py-16 px-4 border-t border-gray-800 relative" role="contentinfo">
 		<div class="absolute inset-0 grid-pattern opacity-5" aria-hidden="true"></div>
 		<div class="max-w-6xl mx-auto text-center text-gray-500 relative z-10">
-			<p class="text-sm uppercase tracking-wider">&copy; 2025 Pole Fit. All rights reserved.</p>
+			<p class="text-sm uppercase tracking-wider">&copy; 2025 Jordega. All rights reserved.</p>
 		</div>
 	</footer>
 </main>

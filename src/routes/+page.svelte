@@ -1,4 +1,6 @@
 <script>
+	import { onMount } from 'svelte';
+
 	let formData = {
 		name: '',
 		email: '',
@@ -10,7 +12,8 @@
 
 	let submitted = false;
 
-	function handleSubmit() {
+	function handleSubmit(event) {
+		event.preventDefault();
 		// In a real app, this would send to a backend
 		console.log('Form submitted:', formData);
 		submitted = true;
@@ -39,10 +42,78 @@
 	// Instagram account - update with your Instagram username
 	const instagramUsername = 'jordygpolefit';
 	const instagramUrl = `https://www.instagram.com/${instagramUsername}/`;
+
+	// Portfolio images state
+	let portfolioImages = $state([]);
+	let loadingPortfolio = $state(true);
+	let portfolioError = $state(null);
+
+	// Lightbox state
+	let lightboxOpen = $state(false);
+	let currentImageIndex = $state(0);
+
+	function openLightbox(index) {
+		currentImageIndex = index;
+		lightboxOpen = true;
+		document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+	}
+
+	function closeLightbox() {
+		lightboxOpen = false;
+		document.body.style.overflow = '';
+	}
+
+	function nextImage() {
+		currentImageIndex = (currentImageIndex + 1) % portfolioImages.length;
+	}
+
+	function previousImage() {
+		currentImageIndex = (currentImageIndex - 1 + portfolioImages.length) % portfolioImages.length;
+	}
+
+	// Keyboard navigation
+	function handleKeydown(event) {
+		if (!lightboxOpen) return;
+		
+		if (event.key === 'Escape') {
+			closeLightbox();
+		} else if (event.key === 'ArrowRight') {
+			nextImage();
+		} else if (event.key === 'ArrowLeft') {
+			previousImage();
+		}
+	}
+
+	// Fetch portfolio images on mount
+	onMount(async () => {
+		try {
+			const response = await fetch('/api/portfolio');
+			const data = await response.json();
+			
+			if (data.success && data.images) {
+				portfolioImages = data.images;
+			} else {
+				portfolioError = data.message || 'No images found';
+			}
+		} catch (error) {
+			console.error('Error fetching portfolio images:', error);
+			portfolioError = 'Unable to load portfolio images';
+		} finally {
+			loadingPortfolio = false;
+		}
+
+		// Add keyboard event listener
+		window.addEventListener('keydown', handleKeydown);
+		
+		return () => {
+			window.removeEventListener('keydown', handleKeydown);
+			document.body.style.overflow = '';
+		};
+	});
 </script>
 
 <svelte:head>
-	<title>Pole Fit - Professional Pole Dancing Services | Jordan Garbett</title>
+	<title>Jordega - Professional Pole Dancing Services | Jordan Garbett</title>
 	<meta name="description" content="Professional pole dancing instruction and event entertainment by Jordan Garbett. Custom performances, private lessons, and event entertainment services." />
 	<meta name="keywords" content="pole dancing, pole fitness, pole dancing instruction, pole dancing lessons, pole dancing events, pole dancing performance, Jordan Garbett, pole dancing instructor" />
 	<meta name="author" content="Jordan Garbett" />
@@ -52,15 +123,15 @@
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://polefit.com/" />
-	<meta property="og:title" content="Pole Fit - Professional Pole Dancing Services | Jordan Garbett" />
+	<meta property="og:title" content="Jordega - Professional Pole Dancing Services | Jordan Garbett" />
 	<meta property="og:description" content="Professional pole dancing instruction and event entertainment by Jordan Garbett. Custom performances, lessons, and events." />
 	<meta property="og:image" content="https://polefit.com/images/og-image.jpg" />
-	<meta property="og:site_name" content="Pole Fit" />
+	<meta property="og:site_name" content="Jordega" />
 	
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:url" content="https://polefit.com/" />
-	<meta name="twitter:title" content="Pole Fit - Professional Pole Dancing Services | Jordan Garbett" />
+	<meta name="twitter:title" content="Jordega - Professional Pole Dancing Services | Jordan Garbett" />
 	<meta name="twitter:description" content="Professional pole dancing instruction and event entertainment by Jordan Garbett." />
 	<meta name="twitter:image" content="https://polefit.com/images/og-image.jpg" />
 	
@@ -69,7 +140,7 @@
 	{
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
-		"name": "Pole Fit",
+		"name": "Jordega",
 		"image": "https://polefit.com/images/og-image.jpg",
 		"@id": "https://polefit.com",
 		"url": "https://polefit.com",
@@ -225,7 +296,7 @@
 		<div class="absolute inset-0 grid-pattern opacity-10 z-10"></div>
 
 		<div class="relative z-30 text-center px-4 max-w-5xl mx-auto">
-			<h1 class="sr-only">Pole Fit - Professional Pole Dancing Services by Jordan Garbett</h1>
+			<h1 class="sr-only">Jordega - Professional Pole Dancing Services by Jordan Garbett</h1>
 			<div class="mb-8" aria-hidden="true">
 				<span class="inline-block text-6xl md:text-8xl font-black tracking-wider chrome-text animate-glow">
 					POLE
@@ -437,18 +508,43 @@
 				<div class="w-32 h-1 bg-gradient-to-r from-transparent via-white to-transparent mx-auto" aria-hidden="true"></div>
 			</div>
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-				<!-- Placeholder portfolio items -->
-				{#each Array(8) as _, i}
-					<div class="portfolio-item-premium aspect-square bg-gradient-to-br from-gray-900 via-black to-gray-900 border-2 border-gray-800 rounded-xl overflow-hidden group cursor-pointer relative">
-						<div class="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-						<div class="w-full h-full flex items-center justify-center text-gray-700 group-hover:text-white transition-all duration-500 relative z-10">
-							<svg class="w-20 h-20 transform group-hover:scale-125 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-							</svg>
+				{#if loadingPortfolio}
+					<!-- Loading skeletons -->
+					{#each Array(8) as _, i}
+						<div class="portfolio-item-premium aspect-square bg-gradient-to-br from-gray-900 via-black to-gray-900 border-2 border-gray-800 rounded-xl overflow-hidden relative animate-pulse">
+							<div class="w-full h-full flex items-center justify-center text-gray-700">
+								<svg class="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+								</svg>
+							</div>
 						</div>
-						<div class="absolute inset-0 border-2 border-white/0 group-hover:border-white/30 rounded-xl transition-all duration-500"></div>
+					{/each}
+				{:else if portfolioImages.length > 0}
+					<!-- Portfolio images -->
+					{#each portfolioImages as image, index}
+						<button
+							type="button"
+							onclick={() => openLightbox(index)}
+							class="portfolio-item-premium aspect-square bg-gradient-to-br from-gray-900 via-black to-gray-900 border-2 border-gray-800 rounded-xl overflow-hidden group cursor-pointer relative focus:outline-none focus:ring-2 focus:ring-white/50"
+							aria-label="View {image.alt || 'portfolio image'} in expanded view"
+						>
+							<img 
+								src={image.src} 
+								alt={image.alt || 'Portfolio image'}
+								class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+								loading="lazy"
+							/>
+							<div class="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+							<div class="absolute inset-0 border-2 border-white/0 group-hover:border-white/30 rounded-xl transition-all duration-500"></div>
+						</button>
+					{/each}
+				{:else}
+					<!-- Fallback if no images found -->
+					<div class="col-span-full text-center py-12">
+						<p class="text-gray-500 mb-4">No portfolio images found.</p>
+						<p class="text-sm text-gray-600">Add images to <code class="px-2 py-1 bg-gray-900 rounded text-gray-400">/static/portfolio/</code> directory</p>
 					</div>
-				{/each}
+				{/if}
 			</div>
 			
 			<!-- Instagram Link -->
@@ -501,7 +597,7 @@
 					<p class="text-gray-400 mt-2">We'll get back to you soon.</p>
 				</div>
 			{:else}
-				<form on:submit|preventDefault={handleSubmit} class="glossy-card-premium p-10 space-y-6" method="POST" aria-label="Contact form">
+				<form onsubmit={handleSubmit} class="glossy-card-premium p-10 space-y-6" method="POST" aria-label="Contact form">
 					<div>
 						<label for="name" class="block text-sm font-bold mb-3 text-gray-300 uppercase tracking-wider">Name</label>
 						<input
@@ -588,10 +684,74 @@
 	<footer class="py-16 px-4 border-t border-gray-800 relative" role="contentinfo">
 		<div class="absolute inset-0 grid-pattern opacity-5" aria-hidden="true"></div>
 		<div class="max-w-6xl mx-auto text-center text-gray-500 relative z-10">
-			<p class="text-sm uppercase tracking-wider">&copy; 2025 Pole Fit. All rights reserved.</p>
+			<p class="text-sm uppercase tracking-wider">&copy; 2025 Jordega. All rights reserved.</p>
 		</div>
 	</footer>
 </main>
+
+<!-- Lightbox Modal -->
+{#if lightboxOpen && portfolioImages.length > 0}
+	<div 
+		class="lightbox-overlay"
+		onclick={closeLightbox}
+		onkeydown={(e) => e.key === 'Escape' && closeLightbox()}
+		role="dialog"
+		aria-modal="true"
+		aria-label="Image lightbox"
+	>
+		<div class="lightbox-container" onclick={(e) => e.stopPropagation()}>
+			<!-- Close Button -->
+			<button
+				onclick={closeLightbox}
+				class="lightbox-close"
+				aria-label="Close lightbox"
+			>
+				<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+				</svg>
+			</button>
+
+			<!-- Image -->
+			<div class="lightbox-image-wrapper">
+				<img 
+					src={portfolioImages[currentImageIndex].src}
+					alt={portfolioImages[currentImageIndex].alt || 'Portfolio image'}
+					class="lightbox-image"
+				/>
+			</div>
+
+			<!-- Navigation -->
+			{#if portfolioImages.length > 1}
+				<!-- Previous Button -->
+				<button
+					onclick={previousImage}
+					class="lightbox-nav lightbox-nav-prev"
+					aria-label="Previous image"
+				>
+					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+					</svg>
+				</button>
+
+				<!-- Next Button -->
+				<button
+					onclick={nextImage}
+					class="lightbox-nav lightbox-nav-next"
+					aria-label="Next image"
+				>
+					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+				</button>
+
+				<!-- Image Counter -->
+				<div class="lightbox-counter">
+					{currentImageIndex + 1} / {portfolioImages.length}
+				</div>
+			{/if}
+		</div>
+	</div>
+{/if}
 
 <style>
 	/* Animations */
@@ -1106,6 +1266,19 @@
 		transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 		position: relative;
 		overflow: hidden;
+		background: none;
+		border: none;
+		padding: 0;
+		width: 100%;
+	}
+
+	.portfolio-item-premium img {
+		transition: transform 0.5s ease;
+		pointer-events: none;
+	}
+
+	.portfolio-item-premium:hover img {
+		transform: scale(1.1);
 	}
 
 	.portfolio-item-premium::after {
@@ -1266,6 +1439,169 @@
 		clip: rect(0, 0, 0, 0);
 		white-space: nowrap;
 		border-width: 0;
+	}
+
+	/* Lightbox Modal */
+	.lightbox-overlay {
+		position: fixed;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.95);
+		backdrop-filter: blur(10px);
+		z-index: 9999;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem;
+		animation: fadeIn 0.3s ease;
+	}
+
+	.lightbox-container {
+		position: relative;
+		max-width: 90vw;
+		max-height: 90vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.lightbox-image-wrapper {
+		position: relative;
+		max-width: 100%;
+		max-height: 90vh;
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 20px 80px rgba(0, 0, 0, 0.8),
+					0 0 100px rgba(255, 255, 255, 0.1);
+		border: 2px solid rgba(255, 255, 255, 0.2);
+		animation: zoomIn 0.3s ease;
+	}
+
+	.lightbox-image {
+		max-width: 100%;
+		max-height: 90vh;
+		width: auto;
+		height: auto;
+		object-fit: contain;
+		display: block;
+	}
+
+	.lightbox-close {
+		position: absolute;
+		top: -3rem;
+		right: 0;
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		border-radius: 12px;
+		width: 3rem;
+		height: 3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		z-index: 10000;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+	}
+
+	.lightbox-close:hover {
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+		border-color: rgba(255, 255, 255, 0.5);
+		transform: scale(1.1);
+		box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+	}
+
+	.lightbox-nav {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		border-radius: 12px;
+		width: 3.5rem;
+		height: 3.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		z-index: 10000;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+	}
+
+	.lightbox-nav:hover {
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+		border-color: rgba(255, 255, 255, 0.5);
+		transform: translateY(-50%) scale(1.1);
+		box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+	}
+
+	.lightbox-nav-prev {
+		left: -4.5rem;
+	}
+
+	.lightbox-nav-next {
+		right: -4.5rem;
+	}
+
+	@media (max-width: 1024px) {
+		.lightbox-close {
+			top: 1rem;
+			right: 1rem;
+		}
+
+		.lightbox-nav-prev {
+			left: 1rem;
+		}
+
+		.lightbox-nav-next {
+			right: 1rem;
+		}
+
+		.lightbox-counter {
+			bottom: 1rem;
+		}
+
+		.lightbox-container {
+			max-width: 95vw;
+		}
+	}
+
+	.lightbox-counter {
+		position: absolute;
+		bottom: -3rem;
+		left: 50%;
+		transform: translateX(-50%);
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		border-radius: 12px;
+		padding: 0.75rem 1.5rem;
+		color: white;
+		font-weight: 700;
+		font-size: 0.9rem;
+		letter-spacing: 1px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+	}
+
+	@keyframes zoomIn {
+		from {
+			opacity: 0;
+			transform: scale(0.9);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 
 	/* Smooth scroll */

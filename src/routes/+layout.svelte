@@ -18,7 +18,7 @@
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between h-20">
 			<a href="/" class="nav-logo text-3xl font-black tracking-tight">
-				POLE FIT
+				JORDEGA
 			</a>
 			
 			<!-- Desktop Menu -->
@@ -26,6 +26,8 @@
 				<a href="/about" class="nav-link">About</a>
 				<a href="/#packages" class="nav-link">Packages</a>
 				<a href="/#portfolio" class="nav-link">Portfolio</a>
+				<a href="/costuming" class="nav-link">Costuming</a>
+				<a href="/faq" class="nav-link">FAQ</a>
 				<a href="/#contact" class="nav-btn">Contact</a>
 			</div>
 			
@@ -51,6 +53,8 @@
 				<a href="/about" onclick={() => menuOpen = false} class="block nav-link-mobile py-3">About</a>
 				<a href="/#packages" onclick={() => menuOpen = false} class="block nav-link-mobile py-3">Packages</a>
 				<a href="/#portfolio" onclick={() => menuOpen = false} class="block nav-link-mobile py-3">Portfolio</a>
+				<a href="/costuming" onclick={() => menuOpen = false} class="block nav-link-mobile py-3">Costuming</a>
+				<a href="/faq" onclick={() => menuOpen = false} class="block nav-link-mobile py-3">FAQ</a>
 				<a href="/#contact" onclick={() => menuOpen = false} class="block nav-btn-mobile text-center py-3">Contact</a>
 			</div>
 		{/if}
