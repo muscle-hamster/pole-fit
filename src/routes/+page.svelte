@@ -1428,6 +1428,48 @@
 		background-size: 12px;
 	}
 
+	/* Date input - Safari specific fixes */
+	input[type="date"].input-premium {
+		padding-right: 1.25rem !important; /* Ensure consistent padding in Safari */
+		-webkit-appearance: none;
+		appearance: none;
+	}
+
+	/* Safari date input calendar picker indicator styling */
+	input[type="date"].input-premium::-webkit-calendar-picker-indicator {
+		cursor: pointer;
+		opacity: 0.8;
+		padding: 0;
+		margin: 0;
+		margin-left: 0.5rem;
+	}
+
+	input[type="date"].input-premium::-webkit-calendar-picker-indicator:hover {
+		opacity: 1;
+	}
+
+	input[type="date"].input-premium:focus::-webkit-calendar-picker-indicator {
+		opacity: 1;
+	}
+
+	/* Safari datetime edit text fields - ensure no extra padding */
+	input[type="date"].input-premium::-webkit-datetime-edit {
+		padding-right: 0.5rem;
+	}
+
+	input[type="date"].input-premium::-webkit-datetime-edit-fields-wrapper {
+		padding-right: 0;
+	}
+
+	input[type="date"].input-premium::-webkit-datetime-edit-text {
+		padding: 0 0.25rem;
+	}
+
+	input[type="date"].input-premium::-webkit-inner-spin-button,
+	input[type="date"].input-premium::-webkit-clear-button {
+		margin-right: 0.25rem;
+	}
+
 	/* Video Background */
 	.video-container {
 		position: absolute;
