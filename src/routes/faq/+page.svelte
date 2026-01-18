@@ -10,14 +10,21 @@
 	<meta property="og:url" content="https://jordega.com/faq" />
 	<meta property="og:title" content="FAQ - Frequently Asked Questions | Jordega" />
 	<meta property="og:description" content="Frequently asked questions about pole dancing services, packages, policies, and booking." />
-	<meta property="og:image" content="https://jordega.com/images/og-image.jpg" />
+	<meta property="og:image" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
+	<meta property="og:image:secure_url" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Jordega - Professional Pole Dancing Performance" />
+	<meta property="og:site_name" content="Jordega" />
 	
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:url" content="https://jordega.com/faq" />
 	<meta name="twitter:title" content="FAQ - Frequently Asked Questions | Jordega" />
 	<meta name="twitter:description" content="Frequently asked questions about pole dancing services and booking." />
-	<meta name="twitter:image" content="https://jordega.com/images/og-image.jpg" />
+	<meta name="twitter:image" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
+	<meta name="twitter:image:alt" content="Jordega - Professional Pole Dancing Performance" />
 	
 	<!-- Schema.org Structured Data -->
 	{@html `<script type="application/ld+json">

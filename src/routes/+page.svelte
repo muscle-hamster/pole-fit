@@ -155,6 +155,8 @@
 	<meta property="og:title" content="Jordega - Professional Pole Dancing Services | Jordan Garbett" />
 	<meta property="og:description" content="Professional pole dancing instruction and event entertainment by Jordan Garbett. Custom performances, lessons, and events." />
 	<meta property="og:image" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
+	<meta property="og:image:secure_url" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
+	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:alt" content="Jordega - Professional Pole Dancing Performance" />
@@ -174,7 +176,7 @@
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
 		"name": "Jordega",
-		"image": "https://jordega.com/images/og-image.jpg",
+		"image": "https://jordega.com/portfolio/RenderedImage.jpeg",
 		"@id": "https://jordega.com",
 		"url": "https://jordega.com",
 		"telephone": "",
