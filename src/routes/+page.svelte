@@ -147,14 +147,14 @@
 	<meta name="keywords" content="pole dancing, pole fitness, pole dancing instruction, pole dancing lessons, pole dancing events, pole dancing performance, Jordan Garbett, pole dancing instructor" />
 	<meta name="author" content="Jordan Garbett" />
 	<meta name="robots" content="index, follow" />
-	<link rel="canonical" href="https://polefit.com/" />
+	<link rel="canonical" href="https://jordega.com/" />
 	
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://polefit.com/" />
+	<meta property="og:url" content="https://jordega.com/" />
 	<meta property="og:title" content="Jordega - Professional Pole Dancing Services | Jordan Garbett" />
 	<meta property="og:description" content="Professional pole dancing instruction and event entertainment by Jordan Garbett. Custom performances, lessons, and events." />
-	<meta property="og:image" content="https://polefit.com/portfolio/RenderedImage.jpeg" />
+	<meta property="og:image" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:alt" content="Jordega - Professional Pole Dancing Performance" />
@@ -162,10 +162,10 @@
 	
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:url" content="https://polefit.com/" />
+	<meta name="twitter:url" content="https://jordega.com/" />
 	<meta name="twitter:title" content="Jordega - Professional Pole Dancing Services | Jordan Garbett" />
 	<meta name="twitter:description" content="Professional pole dancing instruction and event entertainment by Jordan Garbett." />
-	<meta name="twitter:image" content="https://polefit.com/portfolio/RenderedImage.jpeg" />
+	<meta name="twitter:image" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta name="twitter:image:alt" content="Jordega - Professional Pole Dancing Performance" />
 	
 	<!-- Schema.org Structured Data -->
@@ -174,9 +174,9 @@
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
 		"name": "Jordega",
-		"image": "https://polefit.com/images/og-image.jpg",
-		"@id": "https://polefit.com",
-		"url": "https://polefit.com",
+		"image": "https://jordega.com/images/og-image.jpg",
+		"@id": "https://jordega.com",
+		"url": "https://jordega.com",
 		"telephone": "",
 		"priceRange": "$$",
 		"address": {
@@ -220,7 +220,7 @@
 		"provider": {
 			"@type": "Person",
 			"name": "Jordan Garbett",
-			"url": "https://polefit.com/about"
+			"url": "https://jordega.com/about"
 		},
 		"areaServed": {
 			"@type": "Country",

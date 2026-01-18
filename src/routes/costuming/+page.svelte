@@ -3,21 +3,21 @@
 	<meta name="description" content="Costuming guidelines and requirements for pole dancing performances by Jordan Garbett." />
 	<meta name="keywords" content="pole dancing costumes, costuming guidelines, performance attire, pole dancing outfit requirements" />
 	<meta name="robots" content="index, follow" />
-	<link rel="canonical" href="https://polefit.com/costuming" />
+	<link rel="canonical" href="https://jordega.com/costuming" />
 	
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://polefit.com/costuming" />
+	<meta property="og:url" content="https://jordega.com/costuming" />
 	<meta property="og:title" content="Costuming Guidelines | Jordega" />
 	<meta property="og:description" content="Costuming guidelines and requirements for pole dancing performances." />
-	<meta property="og:image" content="https://polefit.com/images/og-image.jpg" />
+	<meta property="og:image" content="https://jordega.com/images/og-image.jpg" />
 	
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:url" content="https://polefit.com/costuming" />
+	<meta name="twitter:url" content="https://jordega.com/costuming" />
 	<meta name="twitter:title" content="Costuming Guidelines | Jordega" />
 	<meta name="twitter:description" content="Costuming guidelines and requirements for pole dancing performances." />
-	<meta name="twitter:image" content="https://polefit.com/images/og-image.jpg" />
+	<meta name="twitter:image" content="https://jordega.com/images/og-image.jpg" />
 </svelte:head>
 
 <main class="min-h-screen bg-black text-white overflow-x-hidden">

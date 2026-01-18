@@ -4,22 +4,22 @@
 	<meta name="keywords" content="Jordan Garbett, pole dancing instructor, pole fitness, pole dancing lessons, pole dancing about" />
 	<meta name="author" content="Jordan Garbett" />
 	<meta name="robots" content="index, follow" />
-	<link rel="canonical" href="https://polefit.com/about" />
+	<link rel="canonical" href="https://jordega.com/about" />
 	
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://polefit.com/about" />
+	<meta property="og:url" content="https://jordega.com/about" />
 	<meta property="og:title" content="About Jordan Garbett | Jordega" />
 	<meta property="og:description" content="Learn about Jordan Garbett and her passion for pole dancing. Professional instruction, event entertainment, and custom performances." />
-	<meta property="og:image" content="https://polefit.com/images/og-image.jpg" />
+	<meta property="og:image" content="https://jordega.com/images/og-image.jpg" />
 	<meta property="og:site_name" content="Jordega" />
 	
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:url" content="https://polefit.com/about" />
+	<meta name="twitter:url" content="https://jordega.com/about" />
 	<meta name="twitter:title" content="About Jordan Garbett | Jordega" />
 	<meta name="twitter:description" content="Learn about Jordan Garbett and her passion for pole dancing." />
-	<meta name="twitter:image" content="https://polefit.com/images/og-image.jpg" />
+	<meta name="twitter:image" content="https://jordega.com/images/og-image.jpg" />
 	
 	<!-- Schema.org Structured Data -->
 	{@html `<script type="application/ld+json">
@@ -27,8 +27,8 @@
 		"@context": "https://schema.org",
 		"@type": "Person",
 		"name": "Jordan Garbett",
-		"url": "https://polefit.com/about",
-		"image": "https://polefit.com/images/og-image.jpg",
+		"url": "https://jordega.com/about",
+		"image": "https://jordega.com/images/og-image.jpg",
 		"jobTitle": "Pole Dancing Instructor and Performer",
 		"worksFor": {
 			"@type": "Organization",

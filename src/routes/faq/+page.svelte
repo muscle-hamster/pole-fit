@@ -3,21 +3,21 @@
 	<meta name="description" content="Frequently asked questions about pole dancing services, packages, policies, and booking with Jordan Garbett." />
 	<meta name="keywords" content="pole dancing FAQ, pole dancing questions, booking policies, deposit requirements, pole dancing services" />
 	<meta name="robots" content="index, follow" />
-	<link rel="canonical" href="https://polefit.com/faq" />
+	<link rel="canonical" href="https://jordega.com/faq" />
 	
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://polefit.com/faq" />
+	<meta property="og:url" content="https://jordega.com/faq" />
 	<meta property="og:title" content="FAQ - Frequently Asked Questions | Jordega" />
 	<meta property="og:description" content="Frequently asked questions about pole dancing services, packages, policies, and booking." />
-	<meta property="og:image" content="https://polefit.com/images/og-image.jpg" />
+	<meta property="og:image" content="https://jordega.com/images/og-image.jpg" />
 	
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:url" content="https://polefit.com/faq" />
+	<meta name="twitter:url" content="https://jordega.com/faq" />
 	<meta name="twitter:title" content="FAQ - Frequently Asked Questions | Jordega" />
 	<meta name="twitter:description" content="Frequently asked questions about pole dancing services and booking." />
-	<meta name="twitter:image" content="https://polefit.com/images/og-image.jpg" />
+	<meta name="twitter:image" content="https://jordega.com/images/og-image.jpg" />
 	
 	<!-- Schema.org Structured Data -->
 	{@html `<script type="application/ld+json">
