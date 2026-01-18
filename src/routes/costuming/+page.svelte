@@ -9,7 +9,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://jordega.com/costuming" />
 	<meta property="og:title" content="Costuming Guidelines | Jordega" />
-	<meta property="og:description" content="Costuming guidelines and requirements for pole dancing performances." />
+	<meta property="og:description" content="Jordan Garbett - Professional pole dancing instruction, performances, and event entertainment." />
 	<meta property="og:image" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta property="og:image:secure_url" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta property="og:image:type" content="image/jpeg" />
@@ -22,7 +22,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:url" content="https://jordega.com/costuming" />
 	<meta name="twitter:title" content="Costuming Guidelines | Jordega" />
-	<meta name="twitter:description" content="Costuming guidelines and requirements for pole dancing performances." />
+	<meta name="twitter:description" content="Jordan Garbett - Professional pole dancing instruction, performances, and event entertainment." />
 	<meta name="twitter:image" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta name="twitter:image:alt" content="Jordega - Professional Pole Dancing Performance" />
 </svelte:head>

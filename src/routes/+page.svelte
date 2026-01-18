@@ -153,7 +153,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://jordega.com/" />
 	<meta property="og:title" content="Jordega - Professional Pole Dancing Services | Jordan Garbett" />
-	<meta property="og:description" content="Professional pole dancing instruction and event entertainment by Jordan Garbett. Custom performances, lessons, and events." />
+	<meta property="og:description" content="Jordan Garbett - Professional pole dancing instruction, performances, and event entertainment." />
 	<meta property="og:image" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta property="og:image:secure_url" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta property="og:image:type" content="image/jpeg" />
@@ -166,7 +166,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:url" content="https://jordega.com/" />
 	<meta name="twitter:title" content="Jordega - Professional Pole Dancing Services | Jordan Garbett" />
-	<meta name="twitter:description" content="Professional pole dancing instruction and event entertainment by Jordan Garbett." />
+	<meta name="twitter:description" content="Jordan Garbett - Professional pole dancing instruction, performances, and event entertainment." />
 	<meta name="twitter:image" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta name="twitter:image:alt" content="Jordega - Professional Pole Dancing Performance" />
 	
