@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 
+	const currentYear = new Date().getFullYear();
+
 	let formData = {
 		name: '',
 		email: '',
@@ -11,14 +13,31 @@
 	};
 
 	let submitted = false;
+	let submitting = false;
+	let error = null;
 
-	function handleSubmit(event) {
+	async function handleSubmit(event) {
 		event.preventDefault();
-		// In a real app, this would send to a backend
-		console.log('Form submitted:', formData);
-		submitted = true;
-		setTimeout(() => {
-			submitted = false;
+		submitting = true;
+		error = null;
+
+		try {
+			const response = await fetch('/api/contact', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(formData)
+			});
+
+			const result = await response.json();
+
+			if (!response.ok || !result.success) {
+				throw new Error(result.error || 'Failed to send message');
+			}
+
+			submitted = true;
+			// Reset form
 			formData = {
 				name: '',
 				email: '',
@@ -27,7 +46,17 @@
 				date: '',
 				message: ''
 			};
-		}, 3000);
+			
+			// Reset success message after 5 seconds
+			setTimeout(() => {
+				submitted = false;
+			}, 5000);
+		} catch (err) {
+			console.error('Form submission error:', err);
+			error = err.message || 'Failed to send message. Please try again.';
+		} finally {
+			submitting = false;
+		}
 	}
 
 	// Generate sparkles for hero
@@ -269,8 +298,8 @@
 			>
 				<!-- Add your video file here - replace with actual video path -->
 				<!-- Place your video file in the /static/videos/ folder -->
-				<source src="/videos/pole-dancing-hero.mp4" type="video/mp4" />
-				<source src="/videos/pole-dancing-hero.webm" type="video/webm" />
+				<source src="/videos/jordega-hero.mp4" type="video/mp4" />
+				<source src="/videos/jordega-hero.webm" type="video/webm" />
 				<!-- Fallback if video doesn't load -->
 			</video>
 			<!-- Dark overlay for text readability -->
@@ -598,6 +627,12 @@
 				</div>
 			{:else}
 				<form onsubmit={handleSubmit} class="glossy-card-premium p-10 space-y-6" method="POST" aria-label="Contact form">
+					{#if error}
+						<div class="bg-red-900/30 border border-red-500/50 text-red-200 p-4 rounded-lg mb-6">
+							<p class="font-semibold">Error: {error}</p>
+							<p class="text-sm mt-2 text-red-300">Please try again or contact us directly.</p>
+						</div>
+					{/if}
 					<div>
 						<label for="name" class="block text-sm font-bold mb-3 text-gray-300 uppercase tracking-wider">Name</label>
 						<input
@@ -671,8 +706,15 @@
 						></textarea>
 					</div>
 
-					<button type="submit" class="glossy-btn-mega w-full py-5 text-xl font-bold">
-						<span class="relative z-10">SEND MESSAGE</span>
+					<button 
+						type="submit" 
+						class="glossy-btn-mega w-full py-5 text-xl font-bold"
+						disabled={submitting}
+						aria-busy={submitting}
+					>
+						<span class="relative z-10">
+							{submitting ? 'SENDING...' : 'SEND MESSAGE'}
+						</span>
 						<div class="absolute inset-0 shine-effect"></div>
 					</button>
 				</form>
@@ -684,7 +726,7 @@
 	<footer class="py-16 px-4 border-t border-gray-800 relative" role="contentinfo">
 		<div class="absolute inset-0 grid-pattern opacity-5" aria-hidden="true"></div>
 		<div class="max-w-6xl mx-auto text-center text-gray-500 relative z-10">
-			<p class="text-sm uppercase tracking-wider">&copy; 2025 Jordega. All rights reserved.</p>
+			<p class="text-sm uppercase tracking-wider">&copy; {currentYear} Jordega. All rights reserved.</p>
 		</div>
 	</footer>
 </main>
@@ -1358,6 +1400,26 @@
 
 	.input-premium::placeholder {
 		color: rgba(255, 255, 255, 0.4);
+	}
+
+	select.input-premium {
+		padding-right: 2.5rem; /* Extra padding to match left padding and accommodate chevron */
+		background-color: rgba(0, 0, 0, 0.6);
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: right 1.25rem center;
+		background-size: 12px;
+		appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+	}
+
+	select.input-premium:focus {
+		background-color: rgba(0, 0, 0, 0.8);
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: right 1.25rem center;
+		background-size: 12px;
 	}
 
 	/* Video Background */
