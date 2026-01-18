@@ -692,12 +692,17 @@
 
 					<div>
 						<label for="date" class="block text-sm font-bold mb-3 text-gray-300 uppercase tracking-wider">Event Date</label>
-						<input
-							type="date"
-							id="date"
-							bind:value={formData.date}
-							class="input-premium"
-						/>
+						<div class="relative">
+							<input
+								type="date"
+								id="date"
+								bind:value={formData.date}
+								class="input-premium date-input {formData.date ? 'has-value' : ''}"
+							/>
+							{#if !formData.date}
+								<span class="date-placeholder">Select a date</span>
+							{/if}
+						</div>
 					</div>
 
 					<div>
@@ -1468,6 +1473,46 @@
 	input[type="date"].input-premium::-webkit-inner-spin-button,
 	input[type="date"].input-premium::-webkit-clear-button {
 		margin-right: 0.25rem;
+	}
+
+	/* Date input placeholder overlay for Safari */
+	.date-input {
+		position: relative;
+	}
+
+	.date-placeholder {
+		position: absolute;
+		left: 1.25rem;
+		top: 50%;
+		transform: translateY(-50%);
+		color: rgba(255, 255, 255, 0.4);
+		pointer-events: none;
+		user-select: none;
+		font-size: 1rem;
+		z-index: 2;
+	}
+
+	.date-input:focus + .date-placeholder,
+	.date-input.has-value + .date-placeholder {
+		display: none;
+	}
+
+	/* Ensure date input text is visible when it has a value */
+	input[type="date"].input-premium:not(:invalid) {
+		color: white;
+	}
+
+	input[type="date"].input-premium:invalid {
+		color: transparent; /* Hide the default empty state text in Safari */
+	}
+
+	input[type="date"].input-premium:invalid::-webkit-datetime-edit {
+		color: transparent;
+	}
+
+	input[type="date"].input-premium:focus:invalid::-webkit-datetime-edit,
+	input[type="date"].input-premium.has-value::-webkit-datetime-edit {
+		color: white;
 	}
 
 	/* Video Background */
