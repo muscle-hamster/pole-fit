@@ -1,6 +1,6 @@
 <svelte:head>
 	<title>FAQ - Frequently Asked Questions | Jordega</title>
-	<meta name="description" content="Frequently asked questions about pole dancing services, packages, policies, and booking with Jordan Garbett." />
+	<meta name="description" content="Frequently asked questions about pole dancing services, packages, policies, and booking with Jordan." />
 	<meta name="keywords" content="pole dancing FAQ, pole dancing questions, booking policies, deposit requirements, pole dancing services" />
 	<meta name="robots" content="index, follow" />
 	<link rel="canonical" href="https://jordega.com/faq" />
@@ -9,7 +9,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://jordega.com/faq" />
 	<meta property="og:title" content="FAQ - Frequently Asked Questions | Jordega" />
-	<meta property="og:description" content="Jordan Garbett - Professional pole dancing instruction, performances, and event entertainment." />
+	<meta property="og:description" content="Jordan - Professional pole dancing instruction, performances, and event entertainment." />
 	<meta property="og:image" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta property="og:image:secure_url" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta property="og:image:type" content="image/jpeg" />
@@ -22,7 +22,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:url" content="https://jordega.com/faq" />
 	<meta name="twitter:title" content="FAQ - Frequently Asked Questions | Jordega" />
-	<meta name="twitter:description" content="Jordan Garbett - Professional pole dancing instruction, performances, and event entertainment." />
+	<meta name="twitter:description" content="Jordan - Professional pole dancing instruction, performances, and event entertainment." />
 	<meta name="twitter:image" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta name="twitter:image:alt" content="Jordega - Professional Pole Dancing Performance" />
 	

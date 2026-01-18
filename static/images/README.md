@@ -12,7 +12,7 @@ Place your Open Graph image here for social media sharing.
 - **File size:** Under 1MB for best performance
 - **Content:** Should include:
   - Jordega branding/logo
-  - Jordan Garbett's name (optional)
+  - Jordan's name (optional)
   - Professional pole dancing imagery
   - Text should be readable at small sizes
 

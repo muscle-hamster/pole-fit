@@ -142,18 +142,18 @@
 </script>
 
 <svelte:head>
-	<title>Jordega - Professional Pole Dancing Services | Jordan Garbett</title>
-	<meta name="description" content="Professional pole dancing instruction and event entertainment by Jordan Garbett. Custom performances, private lessons, and event entertainment services." />
-	<meta name="keywords" content="pole dancing, pole fitness, pole dancing instruction, pole dancing lessons, pole dancing events, pole dancing performance, Jordan Garbett, pole dancing instructor" />
-	<meta name="author" content="Jordan Garbett" />
+	<title>Jordega - Professional Pole Dancing Services | Jordan</title>
+	<meta name="description" content="Professional pole dancing instruction and event entertainment by Jordan. Custom performances, private lessons, and event entertainment services." />
+	<meta name="keywords" content="pole dancing, pole fitness, pole dancing instruction, pole dancing lessons, pole dancing events, pole dancing performance, Jordan, pole dancing instructor" />
+	<meta name="author" content="Jordan" />
 	<meta name="robots" content="index, follow" />
 	<link rel="canonical" href="https://jordega.com/" />
 	
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://jordega.com/" />
-	<meta property="og:title" content="Jordega - Professional Pole Dancing Services | Jordan Garbett" />
-	<meta property="og:description" content="Jordan Garbett - Professional pole dancing instruction, performances, and event entertainment." />
+	<meta property="og:title" content="Jordega - Professional Pole Dancing Services | Jordan" />
+	<meta property="og:description" content="Jordan - Professional pole dancing instruction, performances, and event entertainment." />
 	<meta property="og:image" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta property="og:image:secure_url" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta property="og:image:type" content="image/jpeg" />
@@ -165,8 +165,8 @@
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:url" content="https://jordega.com/" />
-	<meta name="twitter:title" content="Jordega - Professional Pole Dancing Services | Jordan Garbett" />
-	<meta name="twitter:description" content="Jordan Garbett - Professional pole dancing instruction, performances, and event entertainment." />
+	<meta name="twitter:title" content="Jordega - Professional Pole Dancing Services | Jordan" />
+	<meta name="twitter:description" content="Jordan - Professional pole dancing instruction, performances, and event entertainment." />
 	<meta name="twitter:image" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta name="twitter:image:alt" content="Jordega - Professional Pole Dancing Performance" />
 	
@@ -209,7 +209,7 @@
 		],
 		"founder": {
 			"@type": "Person",
-			"name": "Jordan Garbett"
+			"name": "Jordan"
 		}
 	}
 	</script>`}
@@ -221,7 +221,7 @@
 		"serviceType": "Pole Dancing Instruction and Entertainment",
 		"provider": {
 			"@type": "Person",
-			"name": "Jordan Garbett",
+			"name": "Jordan",
 			"url": "https://jordega.com/about"
 		},
 		"areaServed": {
@@ -331,7 +331,7 @@
 		<div class="absolute inset-0 grid-pattern opacity-10 z-10"></div>
 
 		<div class="relative z-30 text-center px-4 max-w-5xl mx-auto">
-			<h1 class="sr-only">Jordega - Professional Pole Dancing Services by Jordan Garbett</h1>
+			<h1 class="sr-only">Jordega - Professional Pole Dancing Services by Jordan</h1>
 			<div class="mb-8" aria-hidden="true">
 				<span class="inline-block text-6xl md:text-8xl font-black tracking-wider chrome-text animate-glow">
 					POLE
@@ -591,7 +591,7 @@
 						target="_blank" 
 						rel="noopener noreferrer nofollow"
 						class="instagram-btn group"
-						aria-label="Visit Jordan Garbett's Instagram profile"
+						aria-label="Visit Jordan's Instagram profile"
 					>
 						<div class="flex items-center gap-4">
 							<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">

@@ -1,16 +1,16 @@
 <svelte:head>
-	<title>About - Jordan Garbett | Jordega</title>
-	<meta name="description" content="Learn about Jordan Garbett and her passion for pole dancing. Professional pole dancing instructor offering lessons, performances, and event entertainment." />
-	<meta name="keywords" content="Jordan Garbett, pole dancing instructor, pole fitness, pole dancing lessons, pole dancing about" />
-	<meta name="author" content="Jordan Garbett" />
+	<title>About - Jordan | Jordega</title>
+	<meta name="description" content="Learn about Jordan and her passion for pole dancing. Professional pole dancing instructor offering lessons, performances, and event entertainment." />
+	<meta name="keywords" content="Jordan, pole dancing instructor, pole fitness, pole dancing lessons, pole dancing about" />
+	<meta name="author" content="Jordan" />
 	<meta name="robots" content="index, follow" />
 	<link rel="canonical" href="https://jordega.com/about" />
 	
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://jordega.com/about" />
-	<meta property="og:title" content="About Jordan Garbett | Jordega" />
-	<meta property="og:description" content="Jordan Garbett - Professional pole dancing instruction, performances, and event entertainment." />
+	<meta property="og:title" content="About Jordan | Jordega" />
+	<meta property="og:description" content="Jordan - Professional pole dancing instruction, performances, and event entertainment." />
 	<meta property="og:image" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta property="og:image:secure_url" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta property="og:image:type" content="image/jpeg" />
@@ -22,8 +22,8 @@
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:url" content="https://jordega.com/about" />
-	<meta name="twitter:title" content="About Jordan Garbett | Jordega" />
-	<meta name="twitter:description" content="Jordan Garbett - Professional pole dancing instruction, performances, and event entertainment." />
+	<meta name="twitter:title" content="About Jordan | Jordega" />
+	<meta name="twitter:description" content="Jordan - Professional pole dancing instruction, performances, and event entertainment." />
 	<meta name="twitter:image" content="https://jordega.com/portfolio/RenderedImage.jpeg" />
 	<meta name="twitter:image:alt" content="Jordega - Professional Pole Dancing Performance" />
 	
@@ -32,7 +32,7 @@
 	{
 		"@context": "https://schema.org",
 		"@type": "Person",
-		"name": "Jordan Garbett",
+		"name": "Jordan",
 		"url": "https://jordega.com/about",
 		"image": "https://jordega.com/portfolio/RenderedImage.jpeg",
 		"jobTitle": "Pole Dancing Instructor and Performer",
@@ -64,7 +64,7 @@
 				<span class="chrome-text animate-glow">ABOUT</span>
 			</h1>
 			<p class="text-2xl md:text-3xl text-gray-300 font-light">
-				Jordan Garbett
+				Jordan
 			</p>
 		</div>
 	</header>
@@ -85,7 +85,7 @@
 				</h2>
 				<div class="space-y-4 text-lg text-gray-200 leading-relaxed">
 					<p>
-						Welcome! I'm <span class="text-white font-semibold">Jordan Garbett</span>, and pole dancing isn't just what I do—it's who I am. What started as curiosity has become a deep passion that shapes my life every day.
+						Welcome! I'm <span class="text-white font-semibold">Jordan</span>, and pole dancing isn't just what I do—it's who I am. What started as curiosity has become a deep passion that shapes my life every day.
 					</p>
 					<p>
 						Pole dancing combines strength, grace, and artistry. It challenges both body and mind, building confidence and celebrating what our bodies can do. Every spin, every hold, every flow tells a story.
