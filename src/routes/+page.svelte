@@ -154,7 +154,10 @@
 	<meta property="og:url" content="https://polefit.com/" />
 	<meta property="og:title" content="Jordega - Professional Pole Dancing Services | Jordan Garbett" />
 	<meta property="og:description" content="Professional pole dancing instruction and event entertainment by Jordan Garbett. Custom performances, lessons, and events." />
-	<meta property="og:image" content="https://polefit.com/images/og-image.jpg" />
+	<meta property="og:image" content="https://polefit.com/portfolio/RenderedImage.jpeg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Jordega - Professional Pole Dancing Performance" />
 	<meta property="og:site_name" content="Jordega" />
 	
 	<!-- Twitter -->
@@ -162,7 +165,8 @@
 	<meta name="twitter:url" content="https://polefit.com/" />
 	<meta name="twitter:title" content="Jordega - Professional Pole Dancing Services | Jordan Garbett" />
 	<meta name="twitter:description" content="Professional pole dancing instruction and event entertainment by Jordan Garbett." />
-	<meta name="twitter:image" content="https://polefit.com/images/og-image.jpg" />
+	<meta name="twitter:image" content="https://polefit.com/portfolio/RenderedImage.jpeg" />
+	<meta name="twitter:image:alt" content="Jordega - Professional Pole Dancing Performance" />
 	
 	<!-- Schema.org Structured Data -->
 	{@html `<script type="application/ld+json">
